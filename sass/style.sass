@@ -1,0 +1,938 @@
+@import '_variables'
+@import '_mixins'
+
+*,*:after,*:before  
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+a 
+    text-decoration: none
+
+body 
+    font-family: 'Lato', sans-serif
+
+.container 
+    max-width: 1140px
+    width: 100%
+    margin: 0 auto
+
+
+/*  header  */
+.header__wrapper 
+    height: 93px
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+.header__left 
+    display: flex
+    &__drop
+        display: none
+        position: absolute
+        width: 262px
+        background-color: #ffffff
+        border-radius: 5px
+        padding: 19px 15px
+    &__drop-active
+        display: block
+    &-title
+        position: relative
+        font-family: Lato
+        font-size: 14px
+        line-height: 25px
+        font-weight: 700
+        text-transform: uppercase
+        letter-spacing: 0.025em
+        color: #232323  
+        &::after
+            content: ''
+            position: absolute
+            width: 236px
+            height: 1px
+            background-color: #e8e8e8
+            top: 30px
+            left: 0px
+    &-menu
+        margin-top: 10px
+        li
+            list-style: none
+    &-link
+        font-family: Lato
+        font-size: 14px
+        line-height: 28px
+        font-weight: 700
+        letter-spacing: 0.025em
+        color: #4f4f4f
+        &:hover
+            color: #2c2c2c
+    
+
+
+
+.main__logo 
+    padding-left: 72px
+    padding-top: 21px
+    padding-bottom: 12px
+    margin-right: 37px
+    position: relative
+    &:before 
+        content: ''
+        position: absolute
+        background-image: url(../img/header/logo.jpg)
+        width: 59px
+        height: 51px
+        top: 0
+        left: 0
+    
+
+/*header>searchform*/
+.search__form
+    position: relative
+    display: flex
+    padding-top: 8px
+
+.choose__browse 
+    transition: background .3s
+    border: 1px solid #e8e8e8
+    border-bottom-left-radius: 5px
+    border-top-left-radius: 5px
+    padding-top: 1px
+    padding-left: 10px
+    width: 87px
+    height: 38px
+    font-size: 14px
+    font-weight: 300
+    line-height: 2.29
+    letter-spacing: 0.35px
+    text-align: left
+    color: #222222
+    cursor: pointer
+    position: relative
+    &:hover 
+        background-color: #e8e8e8
+    &:after 
+        content: ''
+        position: absolute
+        width: 9px
+        height: 6px
+        background-image: url(../img/header/arrow.png)
+        top: 14px
+        left: 65px
+    
+
+
+.input__browse 
+    border: 1px solid #e8e8e8
+    width: 280px
+    height: 38px
+    padding-left: 12px
+    padding-right: 20px
+    font-size: 14px
+    font-weight: 300
+    line-height: .29
+    letter-spacing: 0.35px
+    text-align: left
+    color: #222222
+    &:focus 
+        outline: none
+    
+
+
+.btn__browse 
+    transition: background .3s
+    border: 1px solid #e8e8e8
+    width: 35px
+    height: 38px
+    background-color: #ffffff
+    border-bottom-right-radius: 5px
+    border-top-right-radius: 5px
+    cursor: pointer
+    &:hover 
+        background-color: #e8e8e8
+    
+
+/*---------------*/
+.header__right 
+    display: flex
+
+
+.header__basket 
+    padding-right: 26px
+    padding-top: 7px
+
+
+.header__button 
+    transition: background .3s
+    font-size: 15px
+    font-weight: 400
+    line-height: 1
+    letter-spacing: 0.38px
+    color: #ffffff
+    width: 130px
+    height: 38px
+    padding: 12px 12px 11px 20px
+    background-color: $siteColor
+    position: relative
+    &:hover 
+        background-color: $siteColorHover
+    &:after 
+        content: ''
+        position: absolute
+        width: 9px
+        height: 6px
+        background-image: url(../img/header/arrow-wite.png)
+        top: 17px
+        left: 110px
+    
+
+/* nav */
+.nav 
+    border-top: 1px solid #e8e8e8
+    position: relative
+    &__content 
+        display: flex
+        justify-content: center
+        li 
+            list-style: none
+    &__mega-menu
+        display: none
+        position: absolute
+        background-color: #ffffff
+        border-bottom-left-radius: 5px
+        border-bottom-right-radius: 5px
+        top: 35px
+        left: 35.5%
+        ul
+            list-style: none
+        &-active
+            display: flex
+    &__mega-wrapper
+        width: 283px
+        padding: 20px 25px
+        overflow: hidden
+    &__mega-title
+        position: relative
+        font-family: Lato
+        font-size: 14px
+        line-height: 14px
+        font-weight: 400
+        text-transform: uppercase
+        letter-spacing: 0.025em
+        color: #232323
+        margin-bottom: 20px
+        &::after
+            position: absolute
+            content: ''
+            top: 21px
+            left: 1px
+            width: 235px
+            height: 1px
+            background-color: #e8e8e8
+    &__mega-list
+        margin-bottom: 4px
+    &__mega-link
+        font-family: Lato
+        font-size: 14px
+        line-height: 23px
+        font-weight: 400
+        letter-spacing: 0.025em
+        color: #646464
+        padding: 3px 100% 3px 1px
+        &:hover 
+            background-color: #e8e8e8
+    
+
+
+.nav__link 
+    transition: background .3s
+    display: block
+    padding: 17px 22px 22px 24px
+    text-transform: uppercase
+    font-size: 14px
+    font-weight: 700
+    line-height: 0.86
+    letter-spacing: normal
+    text-align: left
+    color: #222222
+    &:hover 
+        background-color: #e8e8e8
+    
+
+/* pagination */
+.pagination 
+    background-color: #e8e8e8
+    height: 614px
+
+.pagination__content 
+    background-image: url(../img/pagination/pagin-bg.jpg)
+    height: 614px
+    background-position-y: -50px
+
+.pagination__text 
+    border-left: 12px solid $siteColor
+    padding-left: 12px
+    margin-top: 224px
+    float: left
+
+.pagination__title 
+    font-size: 60px
+    line-height: 0.8
+    font-weight: 900
+    letter-spacing: 0.025em
+    color: #222222
+
+
+.pagination__sub 
+    font-weight: 900
+    letter-spacing: 1px
+    color: #222222
+    font-size: 40px
+    letter-spacing: 1px
+    line-height: 0.6
+    padding-top: 18px
+    span 
+        color: $siteColor
+    
+
+
+/*  deal  */
+
+.deal__content 
+    display: grid
+    grid-template-columns: 560px 560px
+    grid-template-rows: 542px 281px
+    margin-top: 96px
+
+
+.deal__wrapper 
+
+    a:first-child 
+    margin-bottom: 20px
+    
+
+
+.deal__item__big 
+    display: block
+    width: 560px
+    height: 542px
+    background-color: #e8e8e8
+    &:first-child 
+        background-image: url(../img/deal/1.jpg)
+        margin-bottom: 21px
+    &:last-child 
+        background-image: url(../img/deal/4.jpg)
+        margin-left: 21px
+    
+
+
+.deal__item__min 
+    display: block
+    width: 560px
+    height: 261px
+    background-color: #dadad2
+    &:first-child 
+        background-image: url(../img/deal/3.jpg)
+        margin-left: 21px
+        margin-bottom: 21px
+    &:last-child 
+        background-image: url(../img/deal/2.jpg)
+        background-position-x: 148px
+        background-repeat: no-repeat
+    
+
+
+/*  deal__text  */
+
+.deal__text 
+    padding: 16px 19px
+    margin-top: 26px
+    float: left
+    background-color: #ffffff
+
+
+.deal__text__title 
+    text-transform: uppercase
+    margin-bottom: 10px
+    font-size: 18px
+    font-weight: 900
+    line-height: 0.8
+    letter-spacing: 0.45px
+    text-align: left
+    color: #222222
+
+
+.deal__text__sub 
+    text-transform: uppercase
+    font-size: 30px
+    font-weight: 900
+    line-height: 0.9
+    letter-spacing: 0.45px
+    text-align: left
+    color: $siteColor
+
+
+
+/*  fetured  */
+
+.fetured__title 
+    margin-top: 100px
+    font-size: 30px
+    font-weight: 700
+    line-height: .8
+    letter-spacing: 0.75px
+    text-align: center
+    color: #222222
+
+
+.fetured__sub 
+    margin-top: 16px
+    margin-bottom: 59px
+    font-size: 14px
+    font-weight: 400
+    line-height: .86
+    letter-spacing: 0.35px
+    text-align: center
+    color: #9f9f9f
+
+
+/*  fetured card  */
+
+.fetured__wrapper 
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+
+
+
+.fetured__card 
+    position: relative
+    width: 261px
+    background-color: #ffffff
+    margin-right: 30px
+    margin-bottom: 37px
+    font-size: 0
+    &:nth-child(4n) 
+        margin-right: 0
+    &:hover 
+        box-shadow: 0px 5px 8px 0px rgba(0,0,0,0.15)
+        transition: box-shadow .2s
+    &:hover .fetured__btn 
+        display: block
+    &:hover .fetured__img 
+        filter: brightness(50%)
+        transition: filter .5s
+    
+
+
+.fetured__img 
+    width: 100%
+    height: 281px
+
+
+.fetured__text 
+    margin-top: 20px
+    display: block
+
+
+.fetured__name 
+    padding: 17px 83px 50px 16px
+    letter-spacing: 0.45px
+    text-transform: uppercase
+    font-size: 13px
+    font-weight: 700
+    line-height: .86
+    text-align: left
+    color: #222222
+    background-color: #ffffff
+
+
+.fetured__prise 
+    padding-left: 16px
+    margin-top: 16px
+    margin-bottom: 21px
+    font-size: 16px
+    font-weight: 700
+    line-height: 1
+    text-align: left
+    color: #f16d7f
+    background-color: #ffffff
+
+
+.fetured__btn 
+    position: absolute
+    display: none
+    width: 123px
+    height: 39px
+    color: #ffffff
+    font-size: 13px
+    font-weight: 700
+    text-decoration: none
+    padding: 11px 13px 7px 12px
+    border: solid 1px #ffffff
+    text-align: center
+    top: 98px
+    left: 70px
+    &:hover 
+        box-shadow: 0px 0 5px  rgb(255, 255, 255)
+        transition: box-shadow .2s
+
+    
+
+
+/* fetured all btn  */
+.fetured__all__btn 
+    transition: background .3s
+    position: relative
+    display: block
+    text-align: left
+    padding-left: 24px
+    padding-top: 16px
+    margin: 20px auto
+    width: 212px
+    height: 48px
+    background-color: $siteColor
+    font-size: 16px
+    line-height: 1
+    font-weight: 700
+    letter-spacing: 0.025em
+    color: #ffffff
+    &:after 
+        content: ''
+        position: absolute
+        width: 15px
+        height: 7px
+        top: 22px
+        left: 175px
+        background-image: url(../img/fetured/fetured-arrow.png)    
+    &:hover 
+        background-color: $siteColorHover
+    
+
+
+/*  offers  */
+
+.offers__content 
+    width: 1140px
+    height: 529px
+    margin-top: 113px
+    background-color: #222224
+    background-image: url(../img/offers/bg_black.png), url(../img/offers/offers-bg.jpg)
+    background-repeat: no-repeat
+    background-position: left
+
+.offers__wrapper 
+    display: flex
+    justify-content: space-between
+
+/*  offers__left  */
+.offers__left 
+    margin-top: 133px
+    margin-left: 39px
+
+
+.offers__left__title 
+    font-size: 53.7px
+    line-height: 1.2
+    font-weight: 700
+    letter-spacing: 0.025em
+    color: #ffffff
+    span 
+        color: $siteColor
+    
+
+
+.oferrs__left__sub 
+    font-size: 32px
+    line-height: 1
+    font-weight: 700
+    letter-spacing: 0.025em
+    color: #ffffff
+
+/*  offers__right  */
+.offers__right 
+    color: #fbfbfb
+    width: 219px
+    height: 102px
+    margin-top: 53px
+    margin-right: 44px
+
+
+.offers__right__block 
+    margin-bottom: 41px
+    position: relative
+    &:first-child:before 
+        content: ''
+        position: absolute
+        background-image: url(../img/offers/forma_1.png)
+        width: 45px
+        height: 32px
+        top: -5px
+        left: -72px
+    &:nth-child(2):before 
+        content: ''
+        position: absolute
+        background-image: url(../img/offers/forma_2.png)
+        width: 40px
+        height: 40px
+        top: -5px
+        left: -74px
+    &:last-child:before 
+        content: ''
+        position: absolute
+        background-image: url(../img/offers/forma_3.png)
+        width: 47px
+        height: 35px
+        top: -8px
+        left: -78px
+    
+
+.offers__right__title 
+    padding-left: 2px
+    margin-bottom: 13px
+    font-family: Lato
+    font-size: 20px
+    font-weight: 700
+    line-height: 1
+    letter-spacing: 0.5px
+    text-align: left
+    color: #fbfbfb
+    position: relative
+    
+
+
+
+.offers__right__text 
+    height: 82px
+    width: 228px
+    font-family: Lato
+    font-size: 14px
+    font-weight: 300
+    line-height: 1.6
+    letter-spacing: 0.35px
+    text-align: left
+    color: #fbfbfb
+
+
+/*  subscribe  */
+
+.subscribe 
+    position: relative
+    margin-top: 97px
+    height: 438px
+    background-color: #e8e8e8
+    background-image: url(../img/subscribe/bgbg.png), url(../img/subscribe/subscribe_bg.jpg)
+    background-repeat: no-repeat
+    background-position: center
+
+
+.subscribe__content 
+    display: flex
+
+.subscribe__left 
+    position: relative
+    display: flex
+    margin-top: 117px
+    margin-left: 108px
+    &:before
+        content: ''
+        position: absolute
+        background-image: url(../img/subscribe/1.png)
+        width: 83px
+        height: 83px
+        top: -7px
+        left: -108px
+    
+
+
+
+.subscribe__text 
+    width: 399px
+    font-size: 16px
+    font-weight: 400
+    font-style: italic
+    line-height: 1.58
+    letter-spacing: 0
+    text-align: left
+    color: #222224
+
+
+.subscribe__author 
+    padding-left: 4px
+    margin-top: 12px
+    width: 89px
+    height: 21px
+    font-size: 16px
+    font-weight: 700
+    line-height: 1.05
+    letter-spacing: 0.4px
+    text-align: left
+    color: $siteColor
+    span 
+        color: #222224
+        font-size: 12px
+    
+
+
+.subscribe__btn 
+    width: 146px
+    display: flex
+    justify-content: space-between
+    margin-top: 51px
+    padding-left: 7px
+
+
+.subscribe__link 
+    display: block
+    width: 38px
+    height: 4px
+    background-color: #d6d6d6
+    &:hover 
+        background-color: $siteColor
+    
+
+
+
+
+/* subscribe__mid */
+.subscribe__mid 
+    width: 1px
+    height: 438px
+    margin-left: 62px
+    margin-right: 90px 
+    background-color: #ffffff
+
+
+/*subscribe__right*/
+.subscribe__right 
+    margin-top: 124px
+
+
+.subscribe__title   
+    width: 386px
+    height: 45px
+    text-transform: uppercase
+    font-size: 24px
+    line-height: 2.5
+    letter-spacing: 0.6px
+    text-align: center
+    color: #222224
+
+
+.subscribe__sub 
+    width: 386px
+    height: 55px
+    text-transform: uppercase
+    font-size: 14px
+    font-weight: 700
+    line-height: 2
+    letter-spacing: 0.3px
+    text-align: center
+    color: #222224
+
+
+.subscribe__form 
+    display: flex
+    justify-content: space-around
+
+
+.subscribe__input 
+    letter-spacing: 0.35px
+    width: 282px
+    height: 46px
+    padding: 18px 100px 19px 31px
+    border: none
+    border-top-left-radius: 23px
+    border-bottom-left-radius: 23px
+    background-color: #e1e1e1
+    &:focus 
+        outline: none
+    
+
+
+.subscribe__form__btn 
+    transition: background .3s
+    cursor: pointer
+    width: 104px
+    height: 46px
+    padding: 17px 12px 18px 16px
+    object-fit: contain
+    background-color: $siteColor
+    border: none
+    border-bottom-right-radius: 23px
+    border-top-right-radius: 23px
+    font-size: 14px
+    line-height: .8
+    letter-spacing: 0.35px
+    text-align: center
+    color: #ffffff
+    &:hover
+        background-color: $siteColorHover 
+    &:focus 
+        outline: none
+    
+
+
+
+/*  footer  */
+.footer__content 
+    margin-top: 123px
+    margin-bottom: 89px
+    display: flex
+
+.footer__brand
+    margin-right: 51px
+    margin-top: 5px
+
+
+.footer__text 
+    width: 440px
+    height: 190px
+    margin-top: 32px
+    font-size: 14px
+    font-weight: 300
+    line-height: 1.69
+    letter-spacing: 0.35px
+    text-align: left
+    color: #898989
+    span 
+        width: 440px
+        display: block
+        padding-top: 27px
+
+    
+    
+
+
+.footer__menu 
+    list-style: none
+
+.footer__company 
+    margin-right: 127px
+
+.footer__info 
+    margin-right: 80px
+
+
+.footer__title 
+    font-size: 18px
+    font-weight: 700
+    line-height: .8
+    letter-spacing: 0.45px
+    color: $siteColor
+    margin-bottom: 29px
+
+.footer__link 
+    transition: color .3s
+    font-size: 16px
+    line-height: 2.6
+    letter-spacing: 0.4px
+    text-align: right
+    color: #898989
+    &:hover 
+        color: #4d4d4d
+    
+
+
+
+
+
+/* main__footer */
+
+.main__footer 
+    background: #e6e6e6
+    height: 79px
+
+
+.main__footer__wrapper 
+    display: flex
+    justify-content: space-between
+    align-items: center
+    height: 69px
+    margin-top: 23px
+    margin-bottom: 23px
+
+.footer__author 
+    font-size: 16px
+    line-height: 33px
+    font-weight: 400
+    letter-spacing: 0.6px
+    color: #7a7a7a
+
+.footer__social 
+    margin-top: 5px
+    a 
+        margin-left: 4px
+    
+
+
+.footer__facebook 
+    img 
+        transition: background .3s
+        padding: 7px
+        width: 32px
+        height: 32px
+        background-color: #ffffff
+        &:hover 
+            background-color: $siteColor
+        &:active
+            opacity: 0.3
+        
+    
+
+
+.footer__twitter 
+    img 
+        transition: background .3s
+        padding: 7px
+        width: 32px
+        height: 32px
+        background-color: #ffffff
+        &:hover 
+            background-color: $siteColor
+        &:active
+            opacity: 0.3
+        
+    
+
+.footer__linkedin 
+    img 
+        transition: background .3s
+        padding: 7px
+        width: 32px
+        height: 32px
+        background-color: #ffffff
+        &:hover 
+            background-color: $siteColor
+        &:active
+            opacity: 0.3
+         
+    
+
+.footer__pinterest 
+    img 
+        transition: background .3s
+        padding: 7px
+        width: 32px
+        height: 32px
+        background-color: #ffffff
+        &:hover 
+            background-color: $siteColor
+        &:active
+            opacity: 0.3
+         
+    
+
+.footer__google 
+    img 
+        transition: background .3s
+        padding: 7px 3px 7px 3px
+        width: 32px
+        height: 32px
+        background-color: #ffffff
+        &:hover 
+            background-color: $siteColor
+        &:active
+            opacity: 0.3
+        
+    
